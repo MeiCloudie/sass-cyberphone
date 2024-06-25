@@ -1,0 +1,70 @@
+h1 {
+  color: white;
+}
+
+// Biến (variable)
+$yellow-100: yellow;
+$yellow-200: rgb(205, 205, 35);
+$fs: 40px;
+$fw: bold;
+$border: 1px solid red;
+
+h2 {
+  background-color: $yellow-100;
+}
+
+// .content .noiDung {
+//   color: orange;
+//   background-color: black;
+//   font-size: 25px;
+// }
+
+// .content p:first-child {
+//   color: red;
+//   background-color: black;
+//   font-size: 25px;
+// }
+
+.content {
+  .noiDung {
+    color: orange;
+    background-color: black;
+    font-size: 25px;
+  }
+
+  // Parent Selector (&)
+  // cách thức gọi đến selector cha nằm ở ngoài
+  p {
+    color: yellow;
+
+    &:first-child {
+      color: white;
+    }
+  }
+
+  //   p:first-child {
+  //     color: white;
+  //   }
+}
+
+// mixin
+@mixin styleButton($p, $fs, $bg, $border) {
+  padding: $p;
+  font-size: $fs;
+  background-color: $bg;
+  border: $border;
+  border-radius: 6px;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: red;
+  }
+
+  &::after {
+    content: " Button";
+  }
+}
+
+.demo1 {
+  @include styleButton(15px 30px, 20px, green, 2px solid red);
+}
