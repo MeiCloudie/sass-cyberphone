@@ -1,0 +1,49 @@
+.product {
+  padding: 50px 0;
+
+  .product_title {
+    text-align: center;
+    @include styleText($text-2xl, bold, $blue-200);
+    margin-bottom: 20px;
+  }
+
+  .product_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    .product_item {
+      padding: 30px;
+      box-shadow: $box-shadow-black;
+      img {
+        box-shadow: $box-shadow-white;
+        width: 100%;
+      }
+
+      h3 {
+        display: flex;
+        justify-content: space-between;
+        @include styleText($text-2xl, bold, $blue-100);
+        margin: 10px 0;
+      }
+
+      p {
+        @include styleText($text-lg, 600, $blue-200);
+      }
+
+      .product_action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .product_rate {
+          color: $yellow-100;
+        }
+
+        button {
+          @include styleButton($blue-100, $text-white-button, 1px);
+        }
+      }
+    }
+  }
+}
