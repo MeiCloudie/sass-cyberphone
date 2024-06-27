@@ -2,7 +2,7 @@
 @mixin styleButton($bg, $color, $border-width, $shadow: none) {
   background-color: $bg;
   color: $color;
-  padding: 20px 40px;
+  padding: 15px 40px;
   border: $border-width solid $blue-100;
   border-radius: 8px;
   font-size: 16px;

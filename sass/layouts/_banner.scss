@@ -1,0 +1,57 @@
+.banner {
+  padding: 50px 0;
+  background-image: url(./../image/product-header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  .banner_content {
+    display: flex;
+    align-items: center;
+
+    .banner_text {
+      width: 50%;
+
+      h1 {
+        @include styleText($text-title, bold, $blue-100);
+      }
+
+      .sub_title {
+        @include styleText($text-xl, bold, $blue-200);
+        margin: 15px 0;
+      }
+
+      p {
+        @include styleText($text-lg, 400, $blue-200);
+      }
+
+      .banner_group_button {
+        button {
+          margin-top: 10px;
+
+          &:first-child {
+            @include styleButton($text-white-button, $blue-100, 2px);
+          }
+
+          &:last-child {
+            @include styleButton(
+              $blue-100,
+              $text-white-button,
+              2px,
+              $box-shadow-white
+            );
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .banner_img {
+      width: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
