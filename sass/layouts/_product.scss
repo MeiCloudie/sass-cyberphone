@@ -15,6 +15,27 @@
     .product_item {
       padding: 30px;
       box-shadow: $box-shadow-black;
+      animation-name: zoomIn;
+      animation-duration: 2s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+
+      //   &:nth-child(2) {
+      //     animation-delay: 2s;
+      //   }
+
+      //   &:nth-child(4) {
+      //     animation-delay: 4s;
+      //   }
+
+      @for $i from 2 through 6 {
+        // Hành động xử lí trong vòng lặp
+        &:nth-child(#{$i}) {
+          //   animation-delay: ($i - 1) * 2s;
+          animation-delay: $i * 2 - 2s;
+        }
+      }
+
       img {
         box-shadow: $box-shadow-white;
         width: 100%;
